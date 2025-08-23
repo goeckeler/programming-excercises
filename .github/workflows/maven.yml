@@ -24,9 +24,9 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: find . -name "pom.xml" -exec mvn -B package --file "{}" --batch-mode --update-snapshots verify \;
-    - name: Staging
-      run: mkdir staging && cp target/*.jar staging
-    - uses: actions/upload-artifact@v4
-      with:
-        name: Package
-        path: staging
+#    - name: Staging
+#      run: mkdir staging && cp target/*.jar staging
+#    - uses: actions/upload-artifact@v4
+#      with:
+#        name: Package
+#        path: staging
